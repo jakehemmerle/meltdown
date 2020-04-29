@@ -1,4 +1,5 @@
 #include <emmintrin.h>
+#include <stdio.h>
 #include <stdint.h>
 #include <x86intrin.h>
 

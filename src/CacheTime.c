@@ -1,4 +1,5 @@
 #include <emmintrin.h>
+#include <stdint.h>
 #include <x86intrin.h>
 
 uint8_t array[10*4096];
@@ -6,7 +7,7 @@ uint8_t array[10*4096];
 int main(int argc, const char **argv) {
   int junk = 0;
   register uint64_t time1, time2;
-  violate uint8_t *addr;
+  volatile uint8_t *addr;
   int i;
 
   // Initialize the array

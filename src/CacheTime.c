@@ -5,7 +5,7 @@ uint8_t array[10*4096];
 
 int main(int argc, const char **argv) {
   int junk = 0;
-  register uint64_t *addr;
+  register uint64_t time1, time2;
   violate uint8_t *addr;
   int i;
 

@@ -25,7 +25,7 @@ int main(int argc, const char **argv) {
     addr = &array[i*4096];
     time1 = __rdtscp(&junk);
     junk = *addr;
-    time2 = __rdtscp(&junk); - time1;
+    time2 = __rdtscp(&junk) - time1;
 
     printf("Access time for array[%d*4096]: %d CPU cycles\n", i, (int) time2);
   }

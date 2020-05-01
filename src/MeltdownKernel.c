@@ -1,11 +1,7 @@
-#include <linux/module.h>
-#include <linux/kernel.h>
-#include <linux/init.h>
-#include <linux/vmalloc.h>
-#include <linux/version.h>
-#include <linux/proc_fs.h>
-#include <linux/seq_file.h>
-#include <linux/uaccess.h>
+#include <emmintrin.h>
+#include <stdio.h>
+#include <stdint.h>
+#include <x86intrin.h>
 
 static char secret[8] = {'S','E','E','D','L','a','b','s'};
 static struct proc_dir_entry *secret_entry;

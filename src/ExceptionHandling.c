@@ -8,7 +8,7 @@ static void catch_segv()
 int main() {
   unsigned long kernel_data_addr = 0xfb61b000;
 
-  signal(SIGPIPE, catch_segv);
+  signal(SIGSEGV, catch_segv);
 
   if (sigsetjmp(jbuf, 1) == 0) { 
     char kernel_data = *(char*)kernel_data_addr;
